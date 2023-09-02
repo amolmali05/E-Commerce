@@ -3,13 +3,14 @@ package com.home;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import com.admin.AddProductData;
+import com.admin.Addproductdata;
+import com.user.Getproductdata;
 
-public class MainMenu {
+public class Mainmenu {
 	
 	public static void main(String[] args) throws SQLException {
 		
-		AddProductData addproductdata=new AddProductData();
+		Addproductdata addproductdata=new Addproductdata();
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Product Name>>");
 		String productname=scanner.nextLine();
@@ -21,6 +22,10 @@ public class MainMenu {
 		double price=scanner.nextDouble();
 
 		addproductdata.addProduct(productname, productdesc,quantity,price);
+		
+		Getproductdata getproductdata=new Getproductdata();
+		getproductdata.getProduct();
+		
 	}
 
 }

@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import com.database.Dbconnection;;
 
-public class AddProductData {
+public class Addproductdata {
 
 	Connection connection=null;
 	PreparedStatement ps=null;
