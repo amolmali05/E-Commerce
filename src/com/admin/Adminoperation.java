@@ -5,11 +5,12 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import com.database.Dbconnection;;
 
-public class Addproductdata {
+public class Adminoperation implements AdminoperationInterface{
 
 	Connection connection=null;
 	PreparedStatement ps=null;
 	
+	@Override
 	public void addProduct(String productname,String productdesc,int quantity,double price) throws SQLException
 	{
 		Dbconnection connectiontest=new Dbconnection();
@@ -31,5 +32,36 @@ public class Addproductdata {
 			connection.close();
 			ps.close();
 		}
+	}
+
+	
+	@Override
+	public void calculateBill() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void displayAmount() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void checkQuantity() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void checkRegisteredUser() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void checkUserHistory() {
+		// TODO Auto-generated method stub
+		
 	}
 }
